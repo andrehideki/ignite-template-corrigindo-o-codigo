@@ -136,6 +136,6 @@ describe("Projects", () => {
   it("should not be able to delete a non existing repository", async () => {
     await request(app)
       .delete(`/repositories/123`)
-      .expect(204);
+      .expect(404);
   });
 });
